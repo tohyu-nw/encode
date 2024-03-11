@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>簡単テキストエンコード　デコードも可能</title>
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI1MyIgaGVpZ2h0PSI1MyIgdmlld0JveD0iMCwwLDUzLDUzIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjEzLjUsLTE1My41KSI+PGcgZGF0YS1wYXBlci1kYXRhPSJ7JnF1b3Q7aXNQYWludGluZ0xheWVyJnF1b3Q7OnRydWV9IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48cGF0aCBkPSJNMjEzLjUsMTgwYzAsLTE0LjYzNTU1IDExLjg2NDQ2LC0yNi41IDI2LjUsLTI2LjVjMTQuNjM1NTUsMCAyNi41LDExLjg2NDQ1IDI2LjUsMjYuNWMwLDE0LjYzNTU1IC0xMS44NjQ0NSwyNi41IC0yNi41LDI2LjVjLTE0LjYzNTU0LDAgLTI2LjUsLTExLjg2NDQ1IC0yNi41LC0yNi41eiIgZmlsbD0iI2ZmZmZmZiIgZmlsbC1ydWxlPSJub256ZXJvIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iTmFOIiBzdHJva2UtbGluZWNhcD0iYnV0dCIvPjxnPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48cGF0aCBkPSJNMjM1LjQ1NDMxLDE2NC40MzUwOGMtMS40Nzk0LDAuMzk5MyAtNC4wMjA4OSwwLjk5MTE1IC01LjEwNzYyLDEuMDc1NjdjLTIuMTE1NDksMC4xNjQ1MyAtNC40NjU5NiwwLjE1NTE4IC02LjkxNjgsLTAuMjc0MDUiLz48cGF0aCBkPSJNMjI5LjE3NDg5LDE3Ny43OTU1M2MtMC40ODEzOCwtMS45MjE3MiAtMS4wMzU3MywtNC4xOTA5NSAtMS4xNTU5MSwtNi4xNDU4MWMtMC4xNDk1OCwtMi40MzMwMyAtMC4zNjkyMiwtMy43MzAzNyAwLjc1NTA5LC05LjA4NTExIi8+PHBhdGggZD0iTTIzMy44NTEwNSwxNjcuMjQwNzZjLTAuODg4NDksMy4wODM2NSAtMS40NzUyOCw1LjExOTU3IC0zLjgxNjg1LDcuMTcwOThjLTIuNjk1OTksMi4zNjE5IC0zLjIzMzY5LDMuMTg2MzQgLTQuODc4OTMsMi45NTY2OGMtMC43MjI0LC0wLjEwMDg0IC0xLjAxMDEzLC0wLjA3NTIzIC0xLjQ5NzczLC0wLjQ0MzgyYy0wLjQ4NzYsLTAuMzY4NTkgLTAuNTczNzgsLTAuNTEwMjkgLTAuNzgyMzksLTEuMjc5OGMtMC4zNzgxMywtMS4zOTQ4IDEuMTcwMDMsLTQuNzI2NDEgNC40NzE1NCwtNi4xNDE4NGMxLjU1NDI3LC0wLjY2NjM1IDEuOTkwNzIsLTAuNjI3NzEgMy4yNzE0MSwtMC44MjExNmMwLjY3MTU0LC0wLjEwMTQ0IDEuOTI2MzQsLTAuMDc1NTggMy4xNDE3OCwwLjI5ODk2YzEuMjE1NDQsMC4zNzQ1NCAyLjIwMTU4LDAuNTc1MjYgMy4wMTcwOCwxLjUyNDk4YzAuODE1NSwwLjk0OTcyIDAuOTY5NiwxLjc0NDM4IDAuODI4MDIsMi45NTI5NmMtMC4xNDE1OCwxLjIwODU4IC0wLjUxNzk3LDIuMDMzMzkgLTEuNTEyNywyLjg5MTY4Yy0wLjk5NDczLDAuODU4MjkgLTIuNzM1NzksMS40ODMxIC0zLjk3ODA5LDEuODQ1OTYiLz48L2c+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJub256ZXJvIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMS41Ij48cGF0aCBkPSJNMjU0LjEwNzc4LDE4My40MDY5MmwtNy43NDkwNiwxNC4wMjg0OCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTI1Ny4xODA2OSwxOTMuMDkzMjVjMCwyLjEwMjk1IC0xLjA0Njc5LDMuODA3NzMgLTIuMzM4MDgsMy44MDc3M2MtMS4yOTEyOSwwIC0yLjMzODA4LC0xLjcwNDc4IC0yLjMzODA4LC0zLjgwNzczYzAsLTIuMTAyOTUgMS4wNDY3OSwtMy44MDc3MyAyLjMzODA4LC0zLjgwNzczYzEuMjkxMjksMCAyLjMzODA4LDEuNzA0NzggMi4zMzgwOCwzLjgwNzczeiIgc3Ryb2tlLWxpbmVjYXA9ImJ1dHQiLz48cGF0aCBkPSJNMjQ4LjAxODYxLDE4Ny40MDQ4OGMwLDIuMTAyOTUgLTEuMDQ2OCwzLjgwNzczIC0yLjMzODA4LDMuODA3NzNjLTEuMjkxMjgsMCAtMi4zMzgwOCwtMS43MDQ3OCAtMi4zMzgwOCwtMy44MDc3M2MwLC0yLjEwMjk1IDEuMDQ2OCwtMy44MDc3MyAyLjMzODA4LC0zLjgwNzczYzEuMjkxMjgsMCAyLjMzODA4LDEuNzA0NzggMi4zMzgwOCwzLjgwNzczeiIgc3Ryb2tlLWxpbmVjYXA9ImJ1dHQiLz48L2c+PGcgZmlsbD0iIzAwMDAwMCIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9ImJ1dHQiPjxwYXRoIGQ9Ik0yNTUuOTMyODksMTczLjcyNjk3bC00LjA2MjY5LDQuMDY5NTdjLTAuMzA1MjEsMC4yOTgzMyAtMC43MTgyOSwwLjQ2NjYzIC0xLjE0NzQ0LDAuNDY2NjNjLTAuNDI3NjEsMCAtMC44NDA2OCwtMC4xNjgyOSAtMS4xNDc0NCwtMC40NjY2M2wtNC4wNjExNiwtNC4wNjk1N2MtMC40NjY2MywtMC40NjY2MyAtMC42MDQzMiwtMS4xNjI3NCAtMC4zNTE4OCwtMS43NjcwNWMwLjI1MjQzLC0wLjYwNDMyIDAuODMzOCwtMC45OTQ0NCAxLjQ5MTY2LC0wLjk5NDQ0aDEuNDYxMDZjLTAuMDM4MjUsLTAuMzUxODggLTAuMTM3NjksLTAuNzQ5NjYgLTAuMzA1OTgsLTEuMTcwMzhjLTAuMDUyNzgsLTAuMTIyMzkgLTAuMTA3MDksLTAuMjQ0NzggLTAuMTY4MjksLTAuMzY3MThjLTAuMDg0MTQsLTAuMTM3NjkgLTAuMDc1NzMsLTAuMTc1OTQgLTAuMTkxMjQsLTAuMzQ0MjRjLTAuMTgzNTksLTAuMjc1MzkgLTAuMzUxODgsLTAuNDgxOTEgLTAuNTUxNTMsLTAuNzE5MDZjLTAuNDA0NjUsLTAuNDM2MDMgLTAuODk0MjQsLTAuODEwODUgLTEuNDE0NDEsLTEuMDg2MjRjLTAuNTI3ODIsLTAuMjc1MzkgLTEuMDc4NTksLTAuNDQzNjggLTEuNTY4MTYsLTAuNTM1NDdjLTAuNDgxOTMsLTAuMDg0MTQgLTAuOTI1NTksLTAuMDkxNzkgLTEuMTg1NjgsLTAuMDkxNzljLTAuMTMwMDQsLTAuMDA3NjUgLTAuMjk4MzQsMC4wMjI5NSAtMC4zODI0OCwwLjAzMDZjLTAuMDkxNzksMC4wMDc2NSAtMC4xNDUzNCwwLjAxNTMgLTAuMTQ1MzQsMC4wMTUzYy0wLjU0MzEyLDAuMDUzNTUgLTEuMDMyNywtMC4zNDQyNCAtMS4wODYyNCwtMC44ODczNmMtMC4wNDU5LC0wLjQ1ODk4IDAuMjIxODMsLTAuODcyMDUgMC42MjcyNiwtMS4wMjUwNWMwLDAgMC4wNTM1NSwtMC4wMjI5NSAwLjEzNzY5LC0wLjA1MzU1YzAuMDk5NDQsLTAuMDMwNiAwLjE5MTI1LC0wLjA4NDE0IDAuNDA1NDMsLTAuMTQ1MzRjMC40MjgzOCwtMC4xMzAwNCAwLjk3MTQ5LC0wLjI2NzczIDEuNjgyOTEsLTAuMzM2NTljMC43MDM3NiwtMC4wNjEyIDEuNTUyODcsLTAuMDQ1OSAyLjQ0ODYzLDAuMTM3NjljMC44OTQyMywwLjE5MTI0IDEuODM1MTMsMC41NTA3NyAyLjcwNzE5LDEuMDcwOTRjMC40MTMwOCwwLjI2Nzc0IDAuODU2NzYsMC41ODEzNyAxLjIwMDk4LDAuODg3MzRjMC4xNTI5OSwwLjExNDc0IDAuNDEzMDgsMC4zNzQ4MiAwLjU2NjA3LDAuNTM1NDdjMC4xNzU5NCwwLjE4MzU5IDAuMzM2NTksMC4zNjcxOCAwLjQ5Nzk5LDAuNTU4NDJjMC42MTg4NSwwLjc2NDk1IDEuMDc3ODIsMS41OTExIDEuMzc2MTUsMi4zNDA3N2MwLjE3NTk0LDAuNDI4MzggMC4yOTgzNCwwLjgzMzgxIDAuMzkwMTMsMS4xODU2OGgxLjYzNzAxYzAuNjU3ODYsMCAxLjIzOTIzLDAuMzkwMTMgMS40OTE2NiwwLjk5NDQ0YzAuMjUyNDMsMC42MDQzMiAwLjExNDc0LDEuMzAwNDMgLTAuMzUxODgsMS43NjcwNSIgZGF0YS1wYXBlci1kYXRhPSJ7JnF1b3Q7aW5kZXgmcXVvdDs6bnVsbH0iLz48cGF0aCBkPSJNMjI0LjA2NzExLDE4Ni4yNzMwMmw0LjA2MjY5LC00LjA2OTU3YzAuMzA1MjEsLTAuMjk4MzMgMC43MTgyOSwtMC40NjY2MyAxLjE0NzQ0LC0wLjQ2NjYzYzAuNDI3NjEsMCAwLjg0MDY4LDAuMTY4MjkgMS4xNDc0NCwwLjQ2NjYzbDQuMDYxMTYsNC4wNjk1N2MwLjQ2NjYzLDAuNDY2NjMgMC42MDQzMiwxLjE2Mjc0IDAuMzUxODgsMS43NjcwNWMtMC4yNTI0MywwLjYwNDMyIC0wLjgzMzgsMC45OTQ0NCAtMS40OTE2NiwwLjk5NDQ0aC0xLjQ2MTA2YzAuMDM4MjUsMC4zNTE4OCAwLjEzNzY5LDAuNzQ5NjYgMC4zMDU5OCwxLjE3MDM4YzAuMDUyNzgsMC4xMjIzOSAwLjEwNzA5LDAuMjQ0NzggMC4xNjgyOSwwLjM2NzE4YzAuMDg0MTQsMC4xMzc2OSAwLjA3NTczLDAuMTc1OTQgMC4xOTEyNCwwLjM0NDI0YzAuMTgzNTksMC4yNzUzOSAwLjM1MTg4LDAuNDgxOTEgMC41NTE1MywwLjcxOTA2YzAuNDA0NjUsMC40MzYwMyAwLjg5NDI0LDAuODEwODUgMS40MTQ0MSwxLjA4NjI0YzAuNTI3ODIsMC4yNzUzOSAxLjA3ODU5LDAuNDQzNjggMS41NjgxNiwwLjUzNTQ3YzAuNDgxOTMsMC4wODQxNCAwLjkyNTU5LDAuMDkxNzkgMS4xODU2OCwwLjA5MTc5YzAuMTMwMDQsMC4wMDc2NSAwLjI5ODM0LC0wLjAyMjk1IDAuMzgyNDgsLTAuMDMwNmMwLjA5MTc5LC0wLjAwNzY1IDAuMTQ1MzQsLTAuMDE1MyAwLjE0NTM0LC0wLjAxNTNjMC41NDMxMiwtMC4wNTM1NSAxLjAzMjcsMC4zNDQyNCAxLjA4NjI0LDAuODg3MzZjMC4wNDU5LDAuNDU4OTggLTAuMjIxODMsMC44NzIwNSAtMC42MjcyNiwxLjAyNTA1YzAsMCAtMC4wNTM1NSwwLjAyMjk1IC0wLjEzNzY5LDAuMDUzNTVjLTAuMDk5NDQsMC4wMzA2IC0wLjE5MTI1LDAuMDg0MTQgLTAuNDA1NDMsMC4xNDUzNGMtMC40MjgzOCwwLjEzMDA0IC0wLjk3MTQ5LDAuMjY3NzMgLTEuNjgyOTEsMC4zMzY1OWMtMC43MDM3NiwwLjA2MTIgLTEuNTUyODcsMC4wNDU5IC0yLjQ0ODYzLC0wLjEzNzY5Yy0wLjg5NDIzLC0wLjE5MTI0IC0xLjgzNTEzLC0wLjU1MDc3IC0yLjcwNzE5LC0xLjA3MDk0Yy0wLjQxMzA4LC0wLjI2Nzc0IC0wLjg1Njc2LC0wLjU4MTM3IC0xLjIwMDk4LC0wLjg4NzM0Yy0wLjE1Mjk5LC0wLjExNDc0IC0wLjQxMzA4LC0wLjM3NDgyIC0wLjU2NjA3LC0wLjUzNTQ3Yy0wLjE3NTk0LC0wLjE4MzU5IC0wLjMzNjU5LC0wLjM2NzE4IC0wLjQ5Nzk5LC0wLjU1ODQyYy0wLjYxODg1LC0wLjc2NDk1IC0xLjA3NzgyLC0xLjU5MTEgLTEuMzc2MTUsLTIuMzQwNzdjLTAuMTc1OTQsLTAuNDI4MzggLTAuMjk4MzQsLTAuODMzODEgLTAuMzkwMTMsLTEuMTg1NjhoLTEuNjM3MDFjLTAuNjU3ODYsMCAtMS4yMzkyMywtMC4zOTAxMyAtMS40OTE2NiwtMC45OTQ0NGMtMC4yNTI0MywtMC42MDQzMiAtMC4xMTQ3NCwtMS4zMDA0MyAwLjM1MTg4LC0xLjc2NzA1IiBkYXRhLXBhcGVyLWRhdGE9InsmcXVvdDtpbmRleCZxdW90OzpudWxsfSIvPjwvZz48L2c+PC9nPjwvZz48L3N2Zz48IS0tcm90YXRpb25DZW50ZXI6MjYuNTAwMDAwMDAwMDAwMTQyOjI2LjUtLT4=">
+  <style>
+    html {
+      height: 100%;
+      width: 100%;
+      background-color: black;
+    }
+    body{
+      margin: 0;
+    }
+    .doc{
+      padding-left: 10%;
+    }
+    textarea:focus {
+    border:3px solid #bfbfbf;
+    outline:0;
+    }
+    .all{
+      background-color: #1a1a1a;
+      width: 100%;
+      text-align: left;
+      padding-bottom: 100pt;
+      border-radius: 5px;
+    }
+    button{
+      padding-bottom: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    var mode = "エンコード";
+    var sr = "もっと見る";
+    function modeencode(){
+      mode = "エンコード"
+      document.getElementById("title").innerHTML = "テキスト" + mode
+      document.getElementById("text").title = mode + "したいテキスト"
+      document.getElementById("run").title = mode
+      document.getElementById("run").innerHTML = mode
+      document.getElementById("runa").innerHTML = null
+      run()
+    }
+    function modedecode(){
+      mode = "デコード"
+      document.getElementById("title").innerHTML = "テキスト" + mode
+      document.getElementById("text").title = mode + "したいテキスト"
+      document.getElementById("run").title = mode
+      document.getElementById("run").innerHTML = mode
+      document.getElementById("runa").innerHTML = null
+      run()
+    }
+    function run(){
+      var text = document.getElementById("text").value;
+      if(mode == "エンコード"){
+        var encode = encodeURIComponent(text);
+        if(encode == null){
+          alert("エラー")
+        }else{
+        document.getElementById("runa").innerHTML = encode + ""
+        }
+      }else{
+        var decode = decodeURIComponent(text);
+        if(decode == null){
+          alert("エラー")
+        }else{
+        document.getElementById("runa").innerHTML = decode + ""
+        }
+      }
+    }
+    function copy(){
+      var txt = document.getElementById("runa");
+      txt.select();
+      document.execCommand("txt");
+    }
+    function srll(){
+      if(sr == "もっと見る"){
+        sr = "閉じる"
+        document.getElementById("sr").innerHTML = "<p>テキスト・URLをエンコード、デコードします。(半角アルファベットはエンコードしても変化しません)<br>例: テキスト → %E3%83%86%E3%82%AD%E3%82%B9%E3%83%88</p>"
+        document.getElementById("mo").innerHTML = sr
+      }else{
+        sr = "もっと見る"
+        document.getElementById("sr").innerHTML = null
+        document.getElementById("mo").innerHTML = sr
+      }
+    document.getElementById("mo").title = sr
+    }
+  </script>
+<div class="all">
+    <div style="width: 100%; height: 5px ; border-radius: 5px 5px 0 0; background-color: #ff4d4d;"></div>
+  <div class="doc">
+    <strong><div id="title" style="font-size: 20pt; color: white;">テキストエンコード</div></strong>
+  </div>
+  <hr color="#666666" size="3px">
+  <div class="doc">
+    <button onclick="modeencode()" id="encode" 
+      style="color: white; background-color: #333333; border:3px solid #666666; float: left; border-radius: 5px 5px 0px 0px; cursor: pointer;">エンコード</button>
+    <button onclick="modedecode()" id="decode" 
+      style="color: white; background-color: #333333; border:3px solid #666666; border-radius: 5px 5px 0px 0px; cursor: pointer;">デコード</button>
+  </div>
+  <div class="doc">
+    <textarea style="color: white; background-color: #333333; border:3px solid #666666; font-size: 15pt; resize: none; width: 60%; height: 10vh; border-radius: 0px 5px 5px 5px;" title="エンコードしたいテキスト" id="text"></textarea>
+    <div style="padding-top: 3px;">
+    <button id="run" onclick="run()" style="border:3px solid #666666; border-radius: 5px; cursor: pointer; background-color: #333333; color: white;">エンコード</button>
+    </div>
+  </div>
+  <div class="doc" style="width: 50%;">
+    <div>
+  <p id="runa" style=" padding: 5px; font-size: 20px; border-radius: 5px; background-color: #f2f2f2; width: 100%; background-color: #333333; color: white; float: left;"></p>
+      </div>
+    
+    <br>
+    <div id="sr" style="color: white;"></div>
+    <button style="border:3px solid #666666; border-radius: 5px; cursor: pointer; background-color: #333333; color: white;" id="mo" onclick="srll()" title="もっと見る">もっと見る</button>
+    
+  </div>
+</div>
+</body>
+
+</html>
