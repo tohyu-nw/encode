@@ -67,7 +67,7 @@
         document.getElementById("runa").innerHTML = encode + ""
         }
       }else{
-        var decode = btoa(unescape(encodeURIComponent(text)));
+        var decode = btoa(unescape(decodeURIComponent(text)));
         if(decode == null){
           alert("エラー")
         }else{
