@@ -60,14 +60,14 @@
     function run(){
       var text = document.getElementById("text").value;
       if(mode == "エンコード"){
-        var encode = btoa(unescape(encodeURIComponent(atext)));
+        var encode = btoa(unescape(encodeURIComponent(text)));
         if(encode == null){
           alert("エラー")
         }else{
         document.getElementById("runa").innerHTML = encode + ""
         }
       }else{
-        var decode = btoa(unescape(encodeURIComponent(atext)));
+        var decode = btoa(unescape(encodeURIComponent(text)));
         if(decode == null){
           alert("エラー")
         }else{
